@@ -1,95 +1,60 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+import homeStyles from "@/app/page.module.css";
+import divWrap from "@/app/page.module.css";
+
 
 export default function Home() {
+
+  const titlePage = {
+    height: "100px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  };
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <nav className={homeStyles.homeNav}>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/">products</a>
+          </li>
+          <li>
+            <a href="/">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+      <h1 style={titlePage}>iLaptops</h1>
+
+      <div className={divWrap.wrapper}>
+        <div className={divWrap.itemBox}>
+          <div className={divWrap.itemImage}></div>
+          <div className={divWrap.itemTitle}><h3>Razer Blade 16 Gaming Laptop Windows 11 Home</h3></div>
+          <div className={divWrap.itemTitle} ><p>price: $799.99</p></div>
         </div>
+
+        <div className={divWrap.itemBox}>
+          <div className={divWrap.itemImage2}></div>
+          <div className={divWrap.itemTitle}><h3>HP Pavilion Gaming 15-dk0000 Series</h3></div>
+          <div className={divWrap.itemTitle} ><p>price: $799.99</p></div>
+        </div>
+
+
+        <div className={divWrap.itemBox}>
+          <div className={divWrap.itemImage3}></div>
+          <div className={divWrap.itemTitle}><h3>Acer Nitro 5 Gaming Laptop</h3></div>
+          <div className={divWrap.itemTitle} ><p>price: $799.99</p></div>
+        </div>
+
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+
     </main>
   );
 }
